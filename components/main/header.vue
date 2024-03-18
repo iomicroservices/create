@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { pages } from '../../utils/data'
+
 </script>
 
 <template>
@@ -7,7 +8,7 @@ import { pages } from '../../utils/data'
         <nav class="navbar navbar-expand-xl">
             <div class="container">
                 <NuxtLink to="/" class="navbar-brand py-2">
-                    <img class="navbar-brand-item" src="/images/logo.svg" alt="logo">
+                    <img class="navbar-brand-item" src="~/assets/images/logo.svg" alt="logo">
                 </NuxtLink>
 
                 <div class="navbar-collapse collapse" id="navbarCollapse">
@@ -43,12 +44,4 @@ import { pages } from '../../utils/data'
     </header>
 </template>
 
-<style lang="scss" scoped>
-/* Targets the element that has both `header-sticky` and `sticky` classes */
-.header-sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-</style>
+<style lang="scss" scoped></style>

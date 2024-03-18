@@ -14,6 +14,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       script: [
         {
           src: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
