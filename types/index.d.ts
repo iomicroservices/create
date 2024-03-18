@@ -15,4 +15,9 @@ declare global {
   interface Tag {
     name: string
   }
+
+  interface Page {
+    name: string
+    path: string
+  }
 }

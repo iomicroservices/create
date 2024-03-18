@@ -1,5 +1,7 @@
 <template>
   <div>
-   <h1>Welcome to the createnumbers</h1>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

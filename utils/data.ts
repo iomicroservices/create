@@ -12,3 +12,23 @@ export const blogs: Blog[] = [
     isPublished: true
   },
 ]
+
+
+export const pages: Page[] = [
+  {
+    name: 'Blog',
+    path: '/blog'
+  },
+  {
+    name: 'FAQs',
+    path: '/faqs'
+  },
+  {
+    name: 'About',
+    path: '/about'
+  },
+  {
+    name: 'Contact',
+    path: '/contact'
+  },
+]
