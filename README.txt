@@ -1,1 +1,1 @@
-Read me first now
+## This is a nuxt project
