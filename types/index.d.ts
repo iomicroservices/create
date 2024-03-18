@@ -9,6 +9,7 @@ declare global {
     image: string
     slug_url: string
     tags: Tag[]
+    isPublished: boolean
   }
 
   interface Tag {
