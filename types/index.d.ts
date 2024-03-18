@@ -1,4 +1,4 @@
-export { Blog };
+export { Blog, Tag };
 
 declare global {
   interface Blog {
@@ -8,5 +8,10 @@ declare global {
     date_published: string
     image: string
     slug_url: string
-    }
+    tags: Tag[]
+  }
+
+  interface Tag {
+    name: string
+  }
 }
