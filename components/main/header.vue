@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { pages } from '../../utils/data'
-const route = useRoute()
-
-const path = computed(() => route.fullPath.replace('/', ''))
 </script>
-
 
 <template>
     <header class="header-sticky sticky-top">

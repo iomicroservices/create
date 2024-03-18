@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["bootstrap/dist/css/bootstrap.min.css"],
+  css: [
+    "bootstrap/dist/css/bootstrap.min.css", 
+    "@/assets/css/main.css",
+    "@/assets/css/color.css"
+  ],
   vite: {
     define: {
       "process.env.DEBUG": false,
