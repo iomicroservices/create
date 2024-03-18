@@ -7,7 +7,7 @@ import { pages } from '../../utils/data'
         <nav class="navbar navbar-expand-xl">
             <div class="container">
                 <NuxtLink to="/" class="navbar-brand py-2">
-                    <img class="navbar-brand-item" src="/assets/images/logo.svg" alt="logo">
+                    <img class="navbar-brand-item" src="/images/logo.svg" alt="logo">
                 </NuxtLink>
 
                 <div class="navbar-collapse collapse" id="navbarCollapse">

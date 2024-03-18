@@ -1,12 +1,13 @@
-<style lang="scss" scoped>
+<script setup lang="ts">
 
-</style>
+</script>
+
 <template>
-  <div>
-   <h1>Welcome to the createnumbers</h1>
+  <div class="container p-7 m-auto">
+   <h1>Home page</h1>
   </div>
 </template>
 
-<script setup>
+<style lang="scss" scoped>
 
-</script>
+</style>
