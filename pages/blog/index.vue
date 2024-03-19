@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { blogs } from '../../utils/data'
 useHead({
   title: 'Blog',
 })
@@ -6,7 +7,8 @@ useHead({
 
 <template>
   <div class="container p-7 m-auto">
-   <h1>Blog page</h1>
+    <!-- {{ blogs }} -->
+   <BlogCard :blogs="blogs" />
   </div>
 </template>
 

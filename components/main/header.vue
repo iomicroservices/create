@@ -50,7 +50,7 @@ import { pages, themes } from '../../utils/data'
                 <ul class="nav align-items-center dropdown-hover ms-sm-2">
         
                     <li class="nav-item d-none d-sm-block">
-                        <a href="/#custom" class="btn btn-sm btn-warning mb-0" role="button">Get started 🚀</a>
+                        <a href="#get-started" class="btn btn-sm btn-warning mb-0" role="button">Get started 🚀</a>
                     </li>
                     <li class="nav-item">
                         <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse"
