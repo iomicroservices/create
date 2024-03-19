@@ -1,4 +1,4 @@
-export { Blog, Tag };
+export { Blog, Tag, ThemeSetting };
 
 declare global {
   interface Blog {
@@ -19,5 +19,13 @@ declare global {
   interface Page {
     name: string
     path: string
+  }
+
+  interface ThemeSetting {
+    name: string
+    value: string
+    isActive: boolean
+    path_1: string
+    path_2?: string
   }
 }

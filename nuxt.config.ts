@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    "bootstrap/dist/css/bootstrap.min.css", 
-    "@/assets/css/main.css",
-    "@/assets/css/color.css"
+    'bootstrap/dist/css/bootstrap.min.css', 
+    '@/assets/css/main.css',
+    '@/assets/css/color.css'
   ],
   vite: {
     define: {
-      "process.env.DEBUG": false,
+      'process.env.DEBUG': false,
     },
   },
 
@@ -18,8 +18,8 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       script: [
         {
-          src: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
-          type: "text/javascript",
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
+          type: 'text/javascript',
         },
       ],
     },
