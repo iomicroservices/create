@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} / Nuxt App` : 'Nuxt App';
+    return titleChunk ? `${titleChunk} · Createnumbers` : 'Createnumbers';
   }
 })
 </script>
