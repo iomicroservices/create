@@ -1,18 +1,12 @@
 <script setup lang="ts">
 import moment from 'moment';
 
-
 interface Props {
   blogs: Blog[]
 }
 
 withDefaults(defineProps<Props>(), {
   blogs: () => ([])
-})
-
-onMounted(() => {
-  console.log(moment('11-01-2022', 'YYYY-MM-DD').toDate())
-
 })
 
 </script>
