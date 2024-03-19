@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import moment from 'moment';
+
+
 interface Props {
   blogs: Blog[]
 }
 
 withDefaults(defineProps<Props>(), {
   blogs: () => ([])
+})
+
+onMounted(() => {
+  console.log(moment('11-01-2022', 'YYYY-MM-DD').toDate())
+
 })
 
 </script>
@@ -27,7 +35,7 @@ withDefaults(defineProps<Props>(), {
 
                     <div class="d-sm-flex justify-content-between align-items-center mt-auto">
                         <p class="mb-2 heading-color fw-semibold">
-                            <p> {{ blog.date_published }}</p>
+                            <p> {{ moment(blog.date_published, 'MMMM Do YYYY').format('LL') }} </p>
                         </p>
                         <a class="icon-link icon-link-hover stretched-link" href="#">Read more<i class="bi bi-arrow-right"></i> </a>
                     </div>
