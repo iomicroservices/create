@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import moment from 'moment';
 
-
 interface Props {
   blogs: Blog[]
 }
@@ -10,15 +9,10 @@ withDefaults(defineProps<Props>(), {
   blogs: () => ([])
 })
 
-onMounted(() => {
-  console.log(moment('11-01-2022', 'YYYY-MM-DD').toDate())
-
-})
-
 </script>
 <template>
-  <article class="card card-hover-shadow border p-3 mb-4" v-for="blog, index in blogs" :key="index">
-    <NuxtLink :to="blog.slug_url">
+  <article class="card card-hover-shadow border p-3 mb-4 w-75" v-for="blog, index in blogs" :key="index">
+    <NuxtLink :to="'/blog/' + blog.slug_url">
         <div class="row">
             <div class="col-md-4">
                 <img
@@ -37,7 +31,7 @@ onMounted(() => {
                         <p class="mb-2 heading-color fw-semibold">
                             <p> {{ moment(blog.date_published, 'MMMM Do YYYY').format('LL') }} </p>
                         </p>
-                        <a class="icon-link icon-link-hover stretched-link" href="#">Read more<i class="bi bi-arrow-right"></i> </a>
+                        <a class="icon-link icon-link-hover stretched-link" href="#">Read more → </a>
                     </div>
                 </div>
             </div>
