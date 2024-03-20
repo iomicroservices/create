@@ -12,7 +12,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 <template>
   <article class="card card-hover-shadow border p-3 mb-4 w-75" v-for="blog, index in blogs" :key="index">
-    <NuxtLink :to="blog.slug_url">
+    <NuxtLink :to="'/blog/' + blog.slug_url">
         <div class="row">
             <div class="col-md-4">
                 <img
