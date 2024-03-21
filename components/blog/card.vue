@@ -1,18 +1,24 @@
 <script setup lang="ts">
 import moment from 'moment';
+import { useBlogStore } from '@/stores/blog.store';
 
 interface Props {
   blogs: Blog[]
 }
 
+const blogStore = useBlogStore()
+
 withDefaults(defineProps<Props>(), {
   blogs: () => ([])
 })
 
+const viewBlog = (blog: Blog) => {
+  blogStore.setDescription(blog)
+}
 </script>
 <template>
   <article class="card card-hover-shadow border p-3 mb-4 w-75" v-for="blog, index in blogs" :key="index">
-    <NuxtLink :to="'/blog/' + blog.slug_url">
+    <NuxtLink :to="'/blog/' + blog.slug_url" @click.prevent="viewBlog(blog)">
         <div class="row">
             <div class="col-md-4">
                 <img
