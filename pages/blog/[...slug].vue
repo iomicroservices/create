@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+import { useBlogStore } from '../../stores/blog.store';
  
-const route = useRoute()
+const blogStore = useBlogStore()
 </script>
 
 <template>
   <div class="container p-7 m-auto">
-   <h1>{{ route.params.slug }}</h1>
+    {{ blogStore.blog }}
   </div>
 </template>
 
