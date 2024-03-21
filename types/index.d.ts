@@ -28,4 +28,9 @@ declare global {
     path_1: string
     path_2?: string
   }
+
+  interface SocMedPlatform {
+    name: string
+    icon: string
+  }
 }

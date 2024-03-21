@@ -176,3 +176,19 @@ export const themes: ThemeSetting[] = [
     path_1: 'M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z'
   }
 ]
+
+export const socmed: SocMedPlatform[] = [
+  {
+    name: 'Facebook',
+    icon: 'bi bi-facebook fa-fw me-2'
+
+  },
+  {
+    name: 'Instagram',
+    icon: 'bi bi-instagram fa-fw me-2'
+  },
+  {
+    name: 'Whatsapp',
+    icon: 'bi bi-whatsapp fa-fw me-2'
+  }
+]
