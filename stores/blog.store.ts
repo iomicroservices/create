@@ -6,7 +6,7 @@ export const useBlogStore = defineStore({
     blog: {} as Blog,
   }),
   actions: {
-    setDescription(value: Blog) {
+    setData(value: Blog) {
       this.blog = value;
     },
   },
