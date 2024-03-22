@@ -32,6 +32,7 @@ const title = ref(route.params.slug.toString())
     <BlogContent 
       :title="blogStore.blog.title"
       :description="blogStore.blog.description"
+      :image="blogStore.blog.image"
       :tags="blogStore.blog.tags"
     />
   </div>

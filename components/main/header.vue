@@ -110,7 +110,7 @@ onMounted(() => {
 						</svg>
 					</button>
 
-                    <ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+                    <ul class="dropdown-menu min-w-auto dropdown-menu-end dropdown-hover" aria-labelledby="bd-theme">
                         <li class="mb-1" v-for="(theme, index) in themes" :key="index">
                             <button type="button" class="dropdown-item d-flex align-items-center" 
                                 :class="{ 'active': theme.value ===  selectedTheme}"

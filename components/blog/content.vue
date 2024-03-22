@@ -38,6 +38,13 @@ const props = defineProps({
       <span class="text-secondary opacity-3 mx-3">|</span>
       <span class="text-secondary">2 min read</span>
 
+      <div class="container pt-5">
+        <img
+          class="img-fluid card-img w-50 rounded"
+          :src="image"
+        />
+      </div>
+
       <blockquote class="card card-body bg-light overflow-hidden mt-5 p-sm-5">
         <div class="vr bg-primary h-100 position-absolute top-0 start-0" style="width: 3px; opacity:100%"></div>
         <span class="display-4 position-absolute top-0 start-0 opacity-1 mt-n3"><i class="bi bi-quote"></i></span>
