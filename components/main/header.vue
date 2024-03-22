@@ -1,6 +1,84 @@
 <script setup lang="ts">
 import { pages, themes } from '../../utils/data'
 
+const selectedTheme = ref()
+
+const getPreferredTheme = () => {
+    if (process.client) {
+        const storedTheme = localStorage.getItem('theme')
+        if (storedTheme) {
+            return storedTheme
+        }
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+    }
+    return 'light'
+}
+
+const setTheme = (theme: any) => {
+    if (process.client) {
+        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', theme)
+        }
+    }
+}
+
+const toggleTheme = (index: number) => {
+    themes.forEach((theme, i) => {
+        theme.isActive = i === index;
+    });
+    const selectedValue = themes[index].value;
+    if (process.client) {
+        selectedTheme.value = selectedValue;
+        localStorage.setItem('theme', selectedValue);
+        setTheme(selectedValue);
+    }
+}
+
+onMounted(() => {
+    if (process.client) {
+        setTheme(getPreferredTheme())
+        window.addEventListener('DOMContentLoaded', () => {
+            var el = document.querySelector('.theme-icon-active');
+            if (el !== null) {
+                const showActiveTheme = (theme: string) => {
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use');
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);
+                    const svgOfActiveBtn = btnToActive?.querySelector('.mode-switch use')?.getAttribute('href') ?? '';
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                        element.classList.remove('active');
+                    });
+
+                    if (btnToActive !== null && svgOfActiveBtn !== null) {
+                        btnToActive.classList.add('active');
+                        activeThemeIcon?.setAttribute('href', svgOfActiveBtn);
+                    }
+                };
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    const storedTheme = localStorage.getItem('theme');
+                    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                        setTheme(getPreferredTheme());
+                    }
+                });
+
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', () => {
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            if (typeof theme === 'string') {
+                                showActiveTheme(theme);
+                            }
+                        });
+                    });
+            }
+        });
+    }
+});
 </script>
 
 <template>
@@ -31,20 +109,21 @@ import { pages, themes } from '../../utils/data'
 							<use href="#"></use>
 						</svg>
 					</button>
-	
-					<ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
-                        <li class="mb-1" v-for="theme, index in themes" :key="index">
-							<button type="button" class="dropdown-item d-flex align-items-center" :class="theme.isActive ? 'active' : ''"
-								data-bs-theme-value="light">
-								<svg width="16" height="16" fill="currentColor"
-									class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
-									<path
-										:d="theme.path_1" />
-									<use href="#"></use>
-								</svg>{{ theme.name }}
-							</button>
-						</li>
-					</ul>
+
+                    <ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+                        <li class="mb-1" v-for="(theme, index) in themes" :key="index">
+                            <button type="button" class="dropdown-item d-flex align-items-center" 
+                                :class="{ 'active': theme.value ===  selectedTheme}"
+                                @click="toggleTheme(index)">
+                                <svg width="16" height="16" fill="currentColor"
+                                    class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+                                    <path :d="theme.path_1" />
+                                    <use href="#"></use>
+                                </svg>
+                                {{ theme.name }}
+                            </button>
+                        </li>
+                    </ul>
 				</li>
 
                 <ul class="nav align-items-center dropdown-hover ms-sm-2">
