@@ -13,7 +13,7 @@ withDefaults(defineProps<Props>(), {
 })
 
 const viewBlog = (blog: Blog) => {
-  blogStore.setDescription(blog)
+  blogStore.setData(blog)
 }
 </script>
 <template>
