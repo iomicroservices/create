@@ -6,8 +6,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container p-7 m-auto">
-    <!-- {{ blogs }} -->
+  <div class="container">
    <BlogCard :blogs="blogs" />
   </div>
 </template>

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="p-8">
     <header>
       <MainHeader />
     </header>
