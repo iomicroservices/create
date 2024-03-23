@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container p-7 m-auto">
+  <div class="container">
    <h1>Contact page</h1>
   </div>
 </template>

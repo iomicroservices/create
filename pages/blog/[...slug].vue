@@ -10,7 +10,7 @@ const title = ref(route.params.slug.toString())
 </script>
 
 <template>
-  <div class="container p-7 m-auto">
+  <div class="container">
     <div class="d-flex position-relative z-index-9">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-dots mb-1">

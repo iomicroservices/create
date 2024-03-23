@@ -82,9 +82,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <header class="header-sticky sticky-top">
+    <header class="header-sticky header-absolute header-sticky-on">
         <nav class="navbar navbar-expand-xl">
-            <div class="container p-4">
+            <div class="container p-3">
                 <NuxtLink to="/" class="navbar-brand py-2">
                     <img class="navbar-brand-item" src="~/assets/images/logo.svg" alt="logo">
                 </NuxtLink>
