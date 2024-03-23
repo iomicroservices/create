@@ -5,6 +5,7 @@ export const useBlogStore = defineStore({
   state: () => ({
     blog: {} as Blog,
   }),
+  persist: true,
   actions: {
     setData(value: Blog) {
       this.blog = value;
