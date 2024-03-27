@@ -7,7 +7,7 @@ const props = defineProps({
   description: { type: String },
   date_published: { type: String },
   image: { type: String },
-  slug_url: { type: String },
+  slug: { type: String },
   tags: { type: Array<Tag> },
   isPublished: { type: Boolean },
 })

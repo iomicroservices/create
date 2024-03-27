@@ -7,7 +7,7 @@ declare global {
     description: string
     date_published: string
     image: string
-    slug_url: string
+    slug: string
     tags: Tag[]
     isPublished: boolean
   }

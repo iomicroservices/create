@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/content": "^2.12.1",
     "@pinia/nuxt": "^0.5.1",
     "bootstrap": "^5.3.3",
     "moment": "^2.30.1",
