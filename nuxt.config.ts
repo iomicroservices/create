@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       theme: 'dracula',
     },
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: [
     'bootstrap/dist/css/bootstrap.min.css', 
     '@/assets/css/main.css',
@@ -18,8 +18,11 @@ export default defineNuxtConfig({
   ],
   vite: {
     define: {
-      'process.env.DEBUG': false,
+      'process.env.DEBUG': false
     },
+    build: {
+      chunkSizeWarningLimit: 1600
+    }
   },
 
   app: {
@@ -37,6 +40,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in'},
   },
 
   runtimeConfig: {
