@@ -3,7 +3,13 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
+    '@nuxt/content'
   ],
+  content: {
+    highlight: {
+      theme: 'dracula',
+    },
+  },
   devtools: { enabled: true },
   css: [
     'bootstrap/dist/css/bootstrap.min.css', 

@@ -18,7 +18,7 @@ const viewBlog = (blog: Blog) => {
 </script>
 <template>
   <article class="card card-hover-shadow border p-3 mb-4 w-75" v-for="blog, index in blogs" :key="index">
-    <NuxtLink :to="'/blog/' + blog.slug_url" @click.prevent="viewBlog(blog)">
+    <NuxtLink :to="'/blog/' + blog.slug" @click.prevent="viewBlog(blog)">
         <div class="row">
             <div class="col-md-4">
                 <img

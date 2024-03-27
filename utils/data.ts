@@ -5,7 +5,7 @@ export const blogs: Blog[] = [
     description: 'Here we will learn How To Properly Fetch Nuxt Content Data and Render It in Nuxt Pages',
     date_published: '2022-01-01',
     image: 'https://picsum.photos/200',
-    slug_url: 'how-to-properly-fetch-nuxt-content-data-and-render-it-in-nuxt-pages',
+    slug: 'how-to-properly-fetch-nuxt-content-data-and-render-it-in-nuxt-pages',
     tags: [
       { name: 'test' }
     ],
@@ -17,7 +17,7 @@ export const blogs: Blog[] = [
     description: 'Discover effective strategies to optimize your website for speed and enhance user experience. From image optimization to code minification, learn how to achieve lightning-fast loading times.',
     date_published: '2022-01-02',
     image: 'https://picsum.photos/200',
-    slug_url: 'optimizing-your-website-for-speed',
+    slug: 'optimizing-your-website-for-speed',
     tags: [
       { name: 'web development' },
       { name: 'performance' }
@@ -30,7 +30,7 @@ export const blogs: Blog[] = [
     description: 'Learn the key principles and best practices for creating responsive web designs that adapt seamlessly to various devices and screen sizes. Enhance user experience with these expert tips.',
     date_published: '2022-01-03',
     image: 'https://picsum.photos/200',
-    slug_url: 'mastering-responsive-design',
+    slug: 'mastering-responsive-design',
     tags: [
       { name: 'web design' },
       { name: 'responsive' }
@@ -43,7 +43,7 @@ export const blogs: Blog[] = [
     description: 'Unlock the full potential of CSS Grid and revolutionize your web layouts. Explore advanced techniques and practical examples to create complex yet flexible designs with ease.',
     date_published: '2022-01-04',
     image: 'https://picsum.photos/200',
-    slug_url: 'the-power-of-css-grid',
+    slug: 'the-power-of-css-grid',
     tags: [
       { name: 'web design' },
       { name: 'css' },
@@ -57,7 +57,7 @@ export const blogs: Blog[] = [
     description: 'Learn how to build scalable and robust APIs using Node.js and Express. From middleware usage to error handling, discover best practices to ensure your APIs are efficient and reliable.',
     date_published: '2022-01-05',
     image: 'https://picsum.photos/200',
-    slug_url: 'building-scalable-apis-with-nodejs-and-express',
+    slug: 'building-scalable-apis-with-nodejs-and-express',
     tags: [
       { name: 'node.js' },
       { name: 'express' },
@@ -71,7 +71,7 @@ export const blogs: Blog[] = [
     description: 'Explore effective UX design strategies to enhance user engagement and satisfaction. From usability testing to user-centered design principles, optimize your digital products for success.',
     date_published: '2022-01-06',
     image: 'https://picsum.photos/200',
-    slug_url: 'effective-ux-design',
+    slug: 'effective-ux-design',
     tags: [
       { name: 'ux design' },
       { name: 'user experience' }
@@ -84,7 +84,7 @@ export const blogs: Blog[] = [
     description: 'Master the art of CSS animations to create stunning visual effects on your website. Learn advanced techniques, keyframe animation, and CSS animation libraries to make your designs stand out.',
     date_published: '2022-01-07',
     image: 'https://picsum.photos/200',
-    slug_url: 'creating-stunning-visual-effects-with-css-animations',
+    slug: 'creating-stunning-visual-effects-with-css-animations',
     tags: [
       { name: 'web design' },
       { name: 'css' },
@@ -98,7 +98,7 @@ export const blogs: Blog[] = [
     description: 'Discover the fundamentals of Progressive Web Apps (PWAs) and learn how to build web applications that offer native-like experiences. From service workers to app manifest, dive into PWA development.',
     date_published: '2022-01-08',
     image: 'https://picsum.photos/200',
-    slug_url: 'introduction-to-progressive-web-apps',
+    slug: 'introduction-to-progressive-web-apps',
     tags: [
       { name: 'web development' },
       { name: 'progressive web apps' },
@@ -112,7 +112,7 @@ export const blogs: Blog[] = [
     description: 'Learn effective data visualization techniques to present complex data in a simple and understandable manner. From charts and graphs to interactive dashboards, unlock the power of visual storytelling.',
     date_published: '2022-01-09',
     image: 'https://picsum.photos/200',
-    slug_url: 'data-visualization-techniques',
+    slug: 'data-visualization-techniques',
     tags: [
       { name: 'data visualization' },
       { name: 'visualization' },
@@ -126,7 +126,7 @@ export const blogs: Blog[] = [
     description: 'Discover essential best practices for securing your web applications against common security threats. From HTTPS implementation to input validation, ensure your applications are protected.',
     date_published: '2022-01-10',
     image: 'https://picsum.photos/200',
-    slug_url: 'securing-your-web-applications',
+    slug: 'securing-your-web-applications',
     tags: [
       { name: 'web development' },
       { name: 'security' }

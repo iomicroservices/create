@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { blogs } from '../../utils/data'
 useHead({
   title: 'Blog',
 })
@@ -7,7 +6,18 @@ useHead({
 
 <template>
   <div class="container">
-   <BlogCard :blogs="blogs" />
+    <ContentList path="/blog"
+    :query="{
+      draft: false,
+      sort: [
+        {
+          date: -1
+        }
+      ],
+    }"
+    v-slot="{list}">
+      <BlogCard :blogs="list" />
+    </ContentList>
   </div>
 </template>
 
