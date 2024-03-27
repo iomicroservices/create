@@ -19,7 +19,7 @@ const props = defineProps({
 
     <div class="d-flex align-items-center flex-wrap mt-4">
         <template v-for="tag, index in props.tags" :key="index">
-            <span class="badge text-bg-dark mb-0 ms-2">{{ tag.name }}</span>
+            <span class="badge text-bg-dark mb-0 ms-2">{{ tag }}</span>
         </template>
         <span class="text-secondary opacity-3 mx-3">|</span>
       <div class="dropdown">
