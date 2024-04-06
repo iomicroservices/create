@@ -35,7 +35,7 @@ export default defineNuxtConfig({
           type: 'text/javascript',
         },
         {
-          src: 'https://www.createnumbers.com/assets/js/functions.js',
+          src: '@/assets/js/script.css',
           type: 'text/javascript',
         },
       ],
