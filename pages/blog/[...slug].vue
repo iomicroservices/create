@@ -27,10 +27,10 @@ const { slug } = useRoute().params
 
       
       <BlogContent 
-      :title="doc.title"
-      :description="doc.description"
-      :image="doc.image"
-      :tags="doc.tags"
+        :title="doc.title"
+        :description="doc.description"
+        :image="doc.image"
+        :tags="doc.tags"
       />
       
       <ContentRenderer :value="doc">
