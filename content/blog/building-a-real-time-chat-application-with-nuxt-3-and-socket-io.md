@@ -20,3 +20,4 @@ Start by creating a new Nuxt 3 project using the Nuxt CLI.
 
 ```bash
 npx create-nuxt-app my-chat-app
+```

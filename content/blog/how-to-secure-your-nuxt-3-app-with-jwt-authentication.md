@@ -20,3 +20,4 @@ Begin by installing the necessary dependencies for JWT authentication. You'll ty
 
 ```bash
 npm install jsonwebtoken cookie-parser
+```
